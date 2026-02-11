@@ -23,8 +23,8 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <Header />
   <main id="main-content" data-layout="index" class="app-layout">
     <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Mingalaba
+      <h1 class="my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl">
+        Hi, I'm Shuangming!
       </h1>
       <a
         target="_blank"
@@ -41,26 +41,34 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <span class="sr-only">RSS Feed</span>
       </a>
 
-      <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
+      <p class="my-2">
+        <!-- WRITE YOUR SHORT BIO HERE -->
+        Welcome to my personal corner of the internet. I am an undergraduate student majoring in Physics.
+        I am interested in physics, mathematics, and computer science.
       </p>
+      
       <p class="mt-2">
-        Read the blog posts or check
+        Here, I share my notes, tutorials, and thoughts on various topics.
+        Check out my
         <LinkButton
           class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
+          href="/about"
         >
-          README
-        </LinkButton> for more info.
+          About Page
+        </LinkButton> or read my latest
+        <LinkButton
+          class="underline decoration-dashed underline-offset-4 hover:text-accent"
+          href="/posts"
+        >
+          Blog Posts
+        </LinkButton>.
       </p>
+      
       {
-        // only display if at least one social link is enabled
+        // This automatically pulls the links you set in config.ts
         SOCIALS.length > 0 && (
           <div class="mt-4 flex max-sm:flex-col sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
+            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Connect with me:</div>
             <Socials />
           </div>
         )
